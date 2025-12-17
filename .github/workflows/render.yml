@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "🕒 $(date)"
           echo "📡 Invio ping a Render..."
-          if curl -s -f https://TUO-SITO.onrender.com; then
+          if curl -s -f https://drjekyll-3v7d.onrender.com; then
             echo "✅ Ping riuscito"
           else
             echo "❌ Ping fallito"
