@@ -1,18 +1,21 @@
-name: Render Monitor
+# .github/workflows/render-keeper.yml
+name: Render Keeper
+
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '* 9-23 * * *'  # Ogni minuto dalle 9:00 alle 23:59
 
 jobs:
-  check:
+  ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Check service
+      - name: Ping Render
         run: |
-          if curl -s -f https://drjekyll-3v7d.onrender.com > /dev/null; then
-            echo "✅ Service is up"
+          echo "🕒 $(date)"
+          echo "📡 Invio ping a Render..."
+          if curl -s -f https://tuo-service.onrender.com; then
+            echo "✅ Ping riuscito"
           else
-            echo "❌ Service might be sleeping"
-            # Forza un secondo tentativo
-            curl -s https://drjekyll-3v7d.onrender.com/ || true
+            echo "❌ Ping fallito"
+            exit 1
           fi
