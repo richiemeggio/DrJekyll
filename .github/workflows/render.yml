@@ -3,7 +3,8 @@ name: Render Keeper
 
 on:
   schedule:
-    - cron: '* 9-23 * * *'  # Ogni minuto dalle 9:00 alle 23:59
+    - cron: '*/10 8-22 * * *'  # Ogni 10 minuti dalle 8:00 alle 22:59 UTC (9-23 italiane)
+  workflow_dispatch:            # Permette avvio manuale
 
 jobs:
   ping:
@@ -13,7 +14,7 @@ jobs:
         run: |
           echo "🕒 $(date)"
           echo "📡 Invio ping a Render..."
-          if curl -s -f https://tuo-service.onrender.com; then
+          if curl -s -f https://TUO-SITO.onrender.com; then
             echo "✅ Ping riuscito"
           else
             echo "❌ Ping fallito"
