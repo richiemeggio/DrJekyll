@@ -1,5 +1,5 @@
 # .github/workflows/render-keeper.yml
-name: Render Keeper
+name: Ping
 
 on:
   schedule:
