@@ -3,7 +3,7 @@ name: Ping
 
 on:
   schedule:
-    - cron: '* 8-22 * * *'  # Ogni minuto dalle 8:00 alle 22:59 UTC (9-23 italiane)
+    - cron: '* 8-23 * * *'  # Ogni minuto dalle 8:00 alle 23:59 UTC (9-24 italiane)
   workflow_dispatch:         # Permette avvio manuale
 
 jobs:
