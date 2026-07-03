@@ -22,7 +22,7 @@ jobs:
           fi
           
           echo "📡 Ping Mr Hyde..."
-          if curl -s -f https://artemis006-mrhyde.hf.space; then
+          if curl -s -f https://ptheagent-mrhyde.hf.space; then
             echo "✅ Mr Hyde OK"
           else
             echo "❌ Mr Hyde fallito"
