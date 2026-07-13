@@ -15,7 +15,7 @@ jobs:
           echo "🕒 $(date)"
           
           echo "📡 Ping Dr Jekyll..."
-          if curl -s -f https://drjekyll-3v7d.onrender.com; then
+          if curl -s -f https://drjekyll-xd2c.onrender.com; then
             echo "✅ Dr Jekyll OK"
           else
             echo "❌ Dr Jekyll fallito"
